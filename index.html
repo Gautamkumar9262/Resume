@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images.png" type="image/x-icon">
+    <title>Portfolio</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* font-family: 'Poppins', sans-serif; */
+            font-family: Arial, Helvetica, sans-serif;
+            background: #8e8888;
+            display: flex;
+            justify-content: center;
+        }
+        .portfolio{
+            height: 100%;
+            width: 100%;
+            background-color: white;
+            border-radius: 10px;
+        
+        }
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 10%;
+            background-color: darkorange;
+        }
+        .logo{
+            color: rgb(16, 16, 16);
+            font-size: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 3px rgb(253, 249, 248);
+
+        }
+        .logo:hover{
+            color: rgb(54, 14, 215);
+            font-weight: 200;
+            font-size: 22px;
+            transition: all 0.3s linear 0s;
+        }
+
+        .section{
+            width: 100%;
+        }
+         .section ul{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 20px;
+        }
+        .section ul a li{
+            color: white;
+            font-size: 18px;
+            list-style: none;
+            justify-content: space-between;
+            text-shadow: 2px 2px 3px rgb(144, 104, 239);
+
+        }
+        .section ul a li:hover{
+            color: rgb(50, 4, 47);
+            font-weight: 200;
+            font-size: 20px;
+            transition: all 0.3s linear 0s;
+        }
+        main{
+            width: 100%;
+            height: 100%;
+        }
+        .main-content{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 10px 10%;
+        }
+
+        .left{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 10%;
+            font-size: 27px;
+        }
+        .left bottom{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 40px;
+
+        }
+        .left button{
+            padding: 10px 30px;
+            background-color: rgb(48, 32, 109);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            gap: 20px;
+        }
+        .left h1 span{
+            color: darkorange;
+        }
+        .left h1 span:hover{
+            color: rgb(136, 13, 128);
+            font-weight: 200;
+            font-size: 30px;
+            transition: all 0.3s linear 0s;
+        }
+        .right img{
+            width: 200px;
+            height: 220px;
+            border-radius: 80px;
+            padding-top: 30px;
+        }
+        .right img:hover{
+            box-shadow: 2px 2px 3px black;
+            width: 210;
+            height: 230px;
+            transition: all 0.3s linear 0s;
+        }
+        .right p{
+            font-size: 20px;
+            padding: 10px 10%;
+            align-items: center;
+        }
+
+        /* introduction page decoration */
+        .introduction{
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            font-weight: bold;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+        .introduction h1 {
+            background-color: darkorange;;
+            padding: 20px;
+            text-align: center;
+            font-size: 40px;
+        }
+        .introduction h1:hover{
+            color: white;
+            font-weight: 200;
+            font-size: 45px;
+            text-shadow: 2px 2px 5px red;
+
+            transition: all 0.3s linear 0s;
+        }
+        .intro_wrap{
+            width: 80%;
+            height: 100%;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px black;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-around;
+            
+
+        }
+        .cover{
+            display: flex;
+            justify-content: center;
+        }
+        .img{
+            width: 200px;
+            height: 250px;
+            padding-top: 40px;
+        }
+        .img img{
+            border-radius: 10px;
+        }
+
+        /* skill */
+        .skill{
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            font-weight: bold;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+        .skill h1{
+            background-color: darkorange;
+            padding: 20px;
+            text-align: center;
+            font-size: 40px;
+        }
+        .skill h1:hover{
+            color: white;
+            font-weight: 200;
+            font-size: 45px;
+            text-shadow: 2px 2px 5px red;
+            transition: all 0.3s linear 0s;
+        }
+        .skill_cover{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .skill_right ul{
+            width: 100%;
+            padding: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            box-shadow: 2px 2px 3px black;
+            text-align: center;
+        }
+        .skill_left ul{
+            width: 100%;
+            padding: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            box-shadow: 2px 2px 3px black;
+            text-align: center;
+        }
+        .skill_right ul li{
+            padding: 10px;
+            list-style: none;
+            
+        }
+        .skill_left ul li{
+            padding: 10px;
+            list-style: none;
+        }
+
+        /* education */
+        .education{
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            font-weight: bold;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+        .education h1{
+            background-color: darkorange;
+            padding: 20px;
+            text-align: center;
+            font-size: 40px;
+        }
+        .education h1:hover{
+            color: white;
+            font-weight: 200;
+            font-size: 45px;
+            text-shadow: 2px 2px 5px red;
+            transition: all 0.3s linear 0s;
+        }
+        .education_item{
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        table{
+            width: 80%;
+            height: 100%;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px black;
+            text-align: center;
+        }
+        table tr td{
+            padding: 10px;   
+        }
+        table tr th{
+            background-color: darksalmon;
+            padding: 10px;
+        }
+
+        /* contact */
+        .contact{
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            font-weight: bold;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+        .contact h1{
+            background-color: darkorange;
+            padding: 20px;
+            text-align: center;
+            font-size: 40px;
+        }
+        .contact h1:hover{
+            color: white;
+            font-weight: 200;
+            font-size: 45px;
+            text-shadow: 2px 2px 5px red;
+            transition: all 0.3s linear 0s;
+        }
+        .contact-box{
+            /* display: flex; */
+            /* justify-content: center; */
+            padding: 20px;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px black;
+            text-align: center;
+        }
+
+
+
+
+        /* footer */
+footer{
+    background-color: darkorange;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+/* media queries */
+@media screen and (max-width: 768px){
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .left{
+        width: 100%;
+        padding: 10px;
+        font-size: 20px;
+    }
+    .right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .right img{
+        width: 150px;
+        height: 170px;
+    }
+    .right p{
+        font-size: 1rem;
+    }
+    .left button{
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    .introduction h1{
+        font-size: 2rem;
+    }
+    .intro_wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .img{
+        width: 150px;
+        height: 200px;
+    }
+    .img img{
+        width: 150px;
+        height: 200px;
+    }
+    .skill h1{
+        font-size: 1.5rem;
+    }
+    .skill_cover{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .skill_right ul{
+        font-size: 1.3rem;
+    }
+    .skill_left ul{
+        font-size: 20px;
+    }
+    .skill_right ul li{
+        padding: 5px;
+    }
+    .skill_left ul li{
+        padding: 5px;
+    }
+    .education h1{
+        font-size: 2rem;
+    }
+    .education_item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    table{
+        width: 100%;
+        font-size: 20px;
+    }
+    table tr td{
+        padding: 5px;
+    }
+    table tr th{
+        padding: 5px;
+    }
+    .contact h1{
+        font-size: 2rem;
+    }
+    .contact-box{
+        font-size: 1.2rem;
+    }
+    footer{
+        font-size: 1rem;
+    }
+    
+}
+
+.education_item table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+    </style>
+</head>
+<body>
+   <div class="portfolio">
+    <header class="header">
+        <div class="logo">
+            <h1>Web Developer</h1>
+        </div>
+        <div class="section">
+            <ul>
+                <a href="#main"><li>Home</li></a>
+                <a href="#introduction"><li>Introduction</li></a>
+                <a href="#skill"><li>Skill&Experties</li></a>
+                <a href="#"><li>Project Showcase</li></a>
+                <a href="#"><li>Professional Experience</li></a>
+                <a href="#education"><li>Education</li></a>
+                <a href="#contact"><li>Contact</li></a>
+            </ul>
+    
+        </div>
+    </header>
+
+    <main class="main" id="main">
+        <div class="main-content">
+        <div class="left">
+            <h1>Im Gautam Kumar, <span>A Web Developer</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam similique aspernatur rerum possimus eligendi dolore, voluptates ad, molestias est officiis eius voluptatem iure, fugit aut?</p><br><br>
+            <div class="bottom">
+                <button class="r">View My Work</button>
+                <button class="l">browse portfolio</button>
+            </div>
+     
+
+        </div>
+        <div class="right">
+            <img src="images.png" alt="">
+            <p>Gautam Kumar</p>
+            <p>Age 20 years</p>
+            <p>Web Developer</p>
+        </div>
+        </div><br><br><br><br><br><br><br><br><br><br><br>
+    </main>
+
+    <!-- introduction page. -->
+    <div class="introduction" id="introduction">
+        <h1>Introduction</h1>
+        <div class="cover">
+    <div class="intro_wrap">
+    <div class="intro_item">
+        <p>Name :- Gautam Kumar</p>
+        <p>Age :- 20years</p>
+        <p>Village :- Indarwa</p>
+        <p>City :- Sonbarsha</p>
+        <p>District :-Sitamarhi</p>
+        <p>State :-Bihar</p>
+        <p>Country :-India</p>
+        <p>Zip Code :-798974</p>
+        <p>Phone Number :-9262909417,9693746821</p>
+        <p>Email :- gautam@gmail.com</p>
+       
+    </div>
+    <div class="img" > <img src="images.png" alt="gautam kumar" width="200px" height="220px">
+        <p font-size="10px">Signature :- Gutam kumar </p>
+    </div>  
+    </div>
+    </div>
+</div>
+
+
+
+<!-- Skill & Experties -->
+ <div class="skill" id="skill">
+    <h1>Soft Skill & Experties</h1>
+    <div class="skill_cover">
+    <div class="skill_right">
+        <ul><u><p>Soft Skills</p></u>
+            <li>Active Learning</li>
+            <li>Problem Solving</li>
+            <li>Critical Thinking</li>
+            <li>Work ethics</li>
+            <li>Leadership</li>
+            <li>Use of Technology</li>
+            <li>Time management</li>
+            <li>Emotional itteligence</li>
+            <li>Teamwork</li>
+            <li>Analytical Thinking</li>
+        </ul>
+    </div>
+    <div class="skill_left">
+        <ul>
+            <u><p color="red">Experties</p></u>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>C</li>
+            <li>C++</li>
+            <li>DSA</li>
+            <li>DBMS</li>
+            <li>SQL</li>
+            <li>Networking</li>
+        </ul>
+    </div>
+</div>
+ </div>
+
+ <!-- Education -->
+  <div class="education" id="education">
+    <h1>Educational Information</h1>
+    <div class="education_item">
+        <table border="1">
+            <tr>
+                <th>Year</th>
+                <th>Class</th>
+                <th>Percentage</th>
+            </tr>
+            <tr>
+                <td>2020</td>
+                <td>10th</td>
+                <td>73.2%</td>
+            </tr>
+            <tr>
+                <td>2022</td>
+                <td>12th</td>
+                <td>74.8%</td>
+            </tr> 
+            <tr>
+                <td>2023</td>
+                <td>ADCA</td>
+                <td>80%</td>
+            </tr>
+            <tr>
+                <td rowspan="2">2024</td>
+                <td>BCA 1st sem</td>
+                <td>82%</td>
+            </tr>
+            <tr>
+                <td>BCA 2nd sem</td>
+                <td>85%</td>
+            </tr>
+        </table> 
+        
+
+    </div>
+  </div>
+
+  <div class="contact" id="contact">
+    <div class="contact-box">
+        <h1>Contact</h1>
+        <p>Phone Number :-9262909417,9693746821</p>
+        <p>Email :-gautan@example</p>
+        <p>Address :-Indarwa, Sonbarsha, Sitamarhi, Bihar, India, 798974</p>
+        <p>Current Address :-jagananath university, chaksu 303901, Jaipur, Rajasthan </p>
+    </div>
+
+  </div>
+
+
+  <footer>
+    <p>&copy; 2021 Gautam Kumar all rights reserved.</p>
+    <p>Phone Number :-9262909417,9693746821</p>
+    <p>Email :-gautan@example</p>
+
+</footer>
+</div>
+
+</body>
+</html>
